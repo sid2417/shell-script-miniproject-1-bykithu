@@ -2,6 +2,7 @@
 
 
 source ./common.sh
+check_root
 
 # echo "Please Enter Your Mysql Password : "
 
