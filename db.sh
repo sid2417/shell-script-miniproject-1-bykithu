@@ -5,24 +5,14 @@
 source ./common.sh
 check_root
 
-# echo "Please Enter Your Mysql Password : "
-
-# read -s PASSWORD
-
 echo "Please enter DB password:"
-read -s mysql_root_password
+read mysql_root_password
+# read -s mysql_root_password
 
 
 dnf install mysql-server -y
-VALIDATE $? "mysql installation is :: "
-
-
 systemctl enable mysqld
-VALIDATE $? "mysql enabling is :: "
-
-
 systemctl start mysqld
-VALIDATE $? "mysql starting is :: "
 
 
 # mysql_secure_installation --set-root-pass ExpenseApp@1
