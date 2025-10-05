@@ -18,6 +18,8 @@ systemctl start mysqld
 # mysql_secure_installation --set-root-pass ExpenseApp@1
 # VALIDATE $? "mysql settingup password is :: "
 
+#This is for accessing the mysql database in backend server
+# mysql -h db.kithusdairy.fun -uroot -pExpenseApp@1
 
 # mysql_secure_installation --set-root-pass $PASSWORD
 # VALIDATE $? "mysql settingup password is :: "
