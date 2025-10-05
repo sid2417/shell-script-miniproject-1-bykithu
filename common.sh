@@ -11,6 +11,13 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+
+
+USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
 check_root(){
     if [ $USERID -ne 0 ]
     then
@@ -20,11 +27,6 @@ check_root(){
         echo "You are super user."
     fi
 }
-
-TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPTNAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
-
 
 VALIDATE(){
    if [ $1 -ne 0 ]
