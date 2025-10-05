@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+
 source ./common.sh
 
 # echo "Please Enter Your Mysql Password : "

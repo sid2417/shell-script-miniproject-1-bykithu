@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e 
+
 source ./common.sh  
 
 dnf install nginx -y &>>$LOGFILE
